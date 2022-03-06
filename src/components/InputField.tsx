@@ -1,11 +1,12 @@
 import React from 'react'
 
+// 型定義
 type InputFieldProps = {
     placeholder: string;
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
-export const InputField = (props: InputFieldProps) => {
+export const InputField = (props: InputFieldProps) => { // 上で作った型を使用
     return (
         <div className='my-10'>
             <span className='block text-sm font-medium text-slate-700'>Change Text</span>

@@ -1,4 +1,6 @@
 import React from "react";
+
+// Redux関連のimport
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../store";
 import { PlusCount, DownCount } from "../store/counter/action";
@@ -6,7 +8,6 @@ import { PlusCount, DownCount } from "../store/counter/action";
 export const Counter = () => {
 
     const CountState = useSelector((state: RootState) => state.count)
-
 
     const dispatch = useDispatch()
     const OnPlusCount = () => {
