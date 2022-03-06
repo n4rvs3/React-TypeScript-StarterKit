@@ -1,6 +1,12 @@
 # React with TypeScript + Redux + tailwindcss スターターキット
 
 ノリと勢いと勉強用に作成したテンプレです。
+サンプルとして
+
+- Inputに入力した文字列が反映されるヤツ
+- Reduxで作られたカウンター機能
+
+が入ってます
 
 ## 入ってるもの
 
