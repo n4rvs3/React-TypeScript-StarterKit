@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { VFC, useState, } from "react";
 
-function App() {
+import { InputField } from './components/InputField'
+import { Counter } from "./components/Counter";
+
+const Top: VFC = () => {
+  const [text, setText] = useState("React")
+
+  const handleChangeText = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setText(e.target.value)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container mx-auto">
+      <h1 className="text-red-400 text-3xl tracking-wide underline underline-offset-8">Hello {text}</h1>
+      <InputField placeholder={text} onChange={e => handleChangeText(e)} />
+      <Counter />
     </div>
-  );
+  )
 }
 
-export default App;
+export default Top
